@@ -15,6 +15,8 @@ class TaskController extends Controller
      */
     public function index()
     {
+        // abort(500); エラーが出るか確認
+        // return []; 取得したTODOが0件だった場合の確認
         return Task::orderByDesc('id')->get();
     }
 
