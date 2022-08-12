@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('{all}', function () {
     return view('index');
 })->where(['all' => '.*']); // 全てのアクセスでindexビューが読み込まれるようになる
