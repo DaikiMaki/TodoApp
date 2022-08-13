@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use App\Http\Requests\TaskRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:checkUser,task')->only([
+            'updateDone', 'update', 'destroy'
+        ]);
+    }
+
     /**
      * Task一覧
      * 
@@ -17,7 +25,7 @@ class TaskController extends Controller
     {
         // abort(500); エラーが出るか確認
         // return []; 取得したTODOが0件だった場合の確認
-        return Task::orderByDesc('id')->get();
+        return Task::where('user_id', Auth::id())->orderByDesc('id')->get();
     }
 
     /**
@@ -26,6 +34,10 @@ class TaskController extends Controller
      */
     public function store(TaskRequest $request)
     {
+        $request->merge([
+            'user_id' => Auth::id()
+        ]);
+
         $task = Task::create($request->all());
 
         return $task

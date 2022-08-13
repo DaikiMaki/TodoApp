@@ -2989,103 +2989,14 @@ var TaskList = function TaskList() {
     children: (0, jsx_runtime_1.jsx)("div", Object.assign({
       className: "inner"
     }, {
-      children: (0, jsx_runtime_1.jsxs)("ul", Object.assign({
+      children: (0, jsx_runtime_1.jsx)("ul", Object.assign({
         className: "task-list"
       }, {
-        children: [tasks.map(function (task) {
+        children: tasks.map(function (task) {
           return (0, jsx_runtime_1.jsx)(TaskItem_1["default"], {
             task: task
           }, task.id);
-        }), (0, jsx_runtime_1.jsxs)("li", {
-          children: [(0, jsx_runtime_1.jsx)("label", Object.assign({
-            className: "checkbox-label"
-          }, {
-            children: (0, jsx_runtime_1.jsx)("input", {
-              type: "checkbox",
-              className: "checkbox-input"
-            })
-          })), (0, jsx_runtime_1.jsx)("div", {
-            children: (0, jsx_runtime_1.jsx)("span", {
-              children: "\u65B0\u3057\u3044TODO"
-            })
-          }), (0, jsx_runtime_1.jsx)("button", Object.assign({
-            className: "btn is-delete"
-          }, {
-            children: "\u524A\u9664"
-          }))]
-        }), (0, jsx_runtime_1.jsxs)("li", {
-          children: [(0, jsx_runtime_1.jsx)("label", Object.assign({
-            className: "checkbox-label"
-          }, {
-            children: (0, jsx_runtime_1.jsx)("input", {
-              type: "checkbox",
-              className: "checkbox-input"
-            })
-          })), (0, jsx_runtime_1.jsx)("form", {
-            children: (0, jsx_runtime_1.jsx)("input", {
-              type: "text",
-              className: "input",
-              defaultValue: "\u7DE8\u96C6\u4E2D\u306ETODO"
-            })
-          }), (0, jsx_runtime_1.jsx)("button", Object.assign({
-            className: "btn"
-          }, {
-            children: "\u66F4\u65B0"
-          }))]
-        }), (0, jsx_runtime_1.jsxs)("li", Object.assign({
-          className: "done"
-        }, {
-          children: [(0, jsx_runtime_1.jsx)("label", Object.assign({
-            className: "checkbox-label"
-          }, {
-            children: (0, jsx_runtime_1.jsx)("input", {
-              type: "checkbox",
-              className: "checkbox-input"
-            })
-          })), (0, jsx_runtime_1.jsx)("div", {
-            children: (0, jsx_runtime_1.jsx)("span", {
-              children: "\u5B9F\u884C\u3057\u305FTODO"
-            })
-          }), (0, jsx_runtime_1.jsx)("button", Object.assign({
-            className: "btn is-delete"
-          }, {
-            children: "\u524A\u9664"
-          }))]
-        })), (0, jsx_runtime_1.jsxs)("li", {
-          children: [(0, jsx_runtime_1.jsx)("label", Object.assign({
-            className: "checkbox-label"
-          }, {
-            children: (0, jsx_runtime_1.jsx)("input", {
-              type: "checkbox",
-              className: "checkbox-input"
-            })
-          })), (0, jsx_runtime_1.jsx)("div", {
-            children: (0, jsx_runtime_1.jsx)("span", {
-              children: "\u30B4\u30DF\u6368\u3066"
-            })
-          }), (0, jsx_runtime_1.jsx)("button", Object.assign({
-            className: "btn is-delete"
-          }, {
-            children: "\u524A\u9664"
-          }))]
-        }), (0, jsx_runtime_1.jsxs)("li", {
-          children: [(0, jsx_runtime_1.jsx)("label", Object.assign({
-            className: "checkbox-label"
-          }, {
-            children: (0, jsx_runtime_1.jsx)("input", {
-              type: "checkbox",
-              className: "checkbox-input"
-            })
-          })), (0, jsx_runtime_1.jsx)("div", {
-            children: (0, jsx_runtime_1.jsx)("span", {
-              children: "\u6383\u9664"
-            })
-          }), (0, jsx_runtime_1.jsx)("button", Object.assign({
-            className: "btn is-delete"
-          }, {
-            children: "\u524A\u9664"
-          }))]
-        })]
+        })
       }))
     }))
   });
